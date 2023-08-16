@@ -1,0 +1,10 @@
+set  a [gets stdin] 
+set  b [gets stdin]
+set add [expr $a+$b]
+set sub [expr $a-$b]
+set mul [expr $a*$b]
+set div [expr $a/$b]
+set modulus [expr $a%$b]
+puts "The output of caluclator is $add $sub $mul $div $modulus"
+
+
