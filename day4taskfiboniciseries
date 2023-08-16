@@ -1,0 +1,19 @@
+set arr1 {{1 2 3} {4 5 6} {7 8 9}} 
+set arr2 {{7 8 9} {6 5 4} {3 2 1}}
+foreach a $arr1 b $arr2 {
+foreach c $a d $b {
+set sum [expr $c*$d]
+lappend z $sum
+}
+lappend y $z
+unset z
+}
+puts $y
+
+proc fibo {n} { 
+        if {$n==0 || $n==1} {
+                return $n
+        } else {
+                return [expr { [fibo [expr {$n - 1} ] ]+ [fibo [expr {$n -2} ] ] } ]
+        }
+}
