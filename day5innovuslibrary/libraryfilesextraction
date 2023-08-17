@@ -1,0 +1,18 @@
+set fp [open "innovus.log" r] 
+set rp [open "library.log" w]
+set fileData [read $fp]
+puts $rp "library files"
+
+foreach line [split $fileData "\n"] {
+
+              set string1 $line
+
+              regexp {\(File (/[^\,]+)\)} $string1 err str
+
+              if {[info exists err]} {
+
+                           puts $rp "$str"
+                           }
+}
+close $fp
+close $rp
