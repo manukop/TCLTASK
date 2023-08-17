@@ -1,10 +1,45 @@
-set  a [gets stdin] 
+puts "Enter the number" 
+set  a [gets stdin]
+puts "Enter the number"
 set  b [gets stdin]
-set add [expr $a+$b]
-set sub [expr $a-$b]
-set mul [expr $a*$b]
-set div [expr $a/$b]
-set modulus [expr $a%$b]
-puts "The output of caluclator is $add $sub $mul $div $modulus"
+puts "give the operator to be calculated"
+set ar [gets stdin]
+switch -- $ar {
+
+add {
+
+set add [expr $a+$b] 
+puts $add
+}
+sub {
+        set sub [expr $a-$b]
+        puts $sub
+}puts "Enter the number" 
+set  a [gets stdin]
+puts "Enter the number"
+set  b [gets stdin]
+puts "give the operator to be calculated"
+set ar [gets stdin]
+switch -- $ar {
+
+add {
+mul {
+        set mul [expr $a*$b]
+        puts $mul
+}
+div {
+        set div [expr $a/$b]
+        puts $div
+}
+mod {
+        set modulus [expr $a%$b]
+        puts $modulus
+ }
+default{
+puts "no operators"
+}
+}
+             
+
 
 
