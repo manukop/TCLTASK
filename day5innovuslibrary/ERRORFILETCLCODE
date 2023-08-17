@@ -1,0 +1,1 @@
+set b [exec sed -n {/**ERROR/p} innovus.log > ERRORLOGFILE.log ]
