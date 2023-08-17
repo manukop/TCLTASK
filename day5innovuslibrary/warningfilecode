@@ -1,1 +1,1 @@
-set a [exec sed -n {/**ERROR/p} innovus.log > ERRORLOGFILE.log]
+set a [exec sed -n {/**WARN/p} innovus.log > warningfiles.log]
